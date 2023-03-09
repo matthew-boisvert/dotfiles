@@ -14,9 +14,7 @@ do_install() {
 	fi
 
 	info "[bat] Install ${BAT_VERSION}"
-	local bat=/tmp/bat.deb
-	download "https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/bat_${BAT_VERSION}_amd64.deb" "${bat}"
-	sudo dpkg -i "${bat}"
+	brew install bat
 }
 
 do_configure() {
